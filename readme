@@ -1,0 +1,11 @@
+(1)java解析路径
+
+protoc --proto_path=src --java_out=build/gen src/foo.proto
+
+例如：
+protoc --proto_path=/Users/yp-tc-m-5028/work_tools/protocol_buffer_workspace/inputfiles --java_out=/Users/yp-tc-m-5028/work_tools/protocol_buffer_workspace/outputfiles /Users/yp-tc-m-5028/work_tools/protocol_buffer_workspace/inputfiles /book.proto
+
+注意：
+（1）使用protobuf2系列的编译器时，proto文件的头部需要定义syntax = "proto2";
+（2）使用protobuf3系列的编译器时，proto文件的头部需要定义syntax = "proto3”;
+
