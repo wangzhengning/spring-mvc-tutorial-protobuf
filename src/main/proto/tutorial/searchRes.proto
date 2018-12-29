@@ -1,0 +1,30 @@
+syntax = "proto2";
+package tutorial;
+
+option java_package = "com.example.tutorial";
+option java_outer_classname = "SearchResponseProto";
+
+
+message SearchResponse {
+    required string msg = 1;
+    required Result result = 2;
+
+    message Result{
+        repeated TdPrd TdPrdListArry = 1;
+    }
+
+    message TdPrd{
+        required string PdCd = 1;
+        required string PdSt = 2;
+        required string BasIntRate = 3;
+        required string PdTp = 4;
+        required string PdNm = 5;
+        required string EarDrwTp = 6;
+        required string IncrsAmt = 7;
+        required string PdDepDay = 8;
+        required string DepDayTp = 9;
+        required string SurvAmt = 10;
+        required string FloIntRate = 11;
+    }
+    required string code = 3;
+}

@@ -1,0 +1,16 @@
+syntax = "proto2";
+package tutorial;
+
+option java_package = "com.example.tutorial";
+option java_outer_classname = "SearchRequestProto";
+
+message SearchRequest {
+    required Request request = 1;
+    message Request{
+        required string PlatCstId = 1;
+        required string ChannelNo = 2;
+        required string TxnDt = 3;
+        required string TxnTs = 4;
+        required string TxnSrlNo = 5;
+    }
+}
